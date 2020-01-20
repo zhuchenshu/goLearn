@@ -22,7 +22,11 @@ func main() {
 }
 ```
 2. 引入go mod 管理
+
 terminal进入项目文件夹
+
 `go mod init hello` : 创建go.mod
+
 `go build .`:  go mod 会自动查找依赖自动下载
+
 注意：设置 GOPROXY 环境变量实现代理避免一些包在国内网络下无法下载  export GOPROXY=https://goproxy.io
