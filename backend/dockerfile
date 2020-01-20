@@ -1,0 +1,20 @@
+#基础源构建镜像
+FROM scratch
+
+#映射端口
+EXPOSE 8080
+
+#工作路径   容器内的工作路径
+WORKDIR /opt/shu/
+
+#将编译过后的二进制文件copy至容器指定目录下
+ADD goLearn /opt/shu/
+
+#启动程序
+CMD ["./goLearn"]
+
+
+#步骤：
+#1.工程编译命令：    GOARCH=amd64 GOOS=linux CGO_ENABLED=0 go build .
+#2.制作docker image：docker build -f dockerfile -t golearn:v1.0.0 .
+#3.启动：docker run -it -p 8080:8080 -d  golearn:v1.0.0
