@@ -30,3 +30,7 @@ terminal进入项目文件夹
 `go build .`:  go mod 会自动查找依赖自动下载
 
 注意：设置 GOPROXY 环境变量实现代理避免一些包在国内网络下无法下载  export GOPROXY=https://goproxy.io
+
+3.将项目打包到docker发布
+
+参考backend/dockerfile注释步骤
