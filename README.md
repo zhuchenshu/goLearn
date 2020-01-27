@@ -34,3 +34,11 @@ terminal进入项目文件夹
 3.将项目打包到docker发布
 
 参考backend/dockerfile注释步骤
+
+#### 日志
+
+日志方案选用zap + lumberjack
+
+当前的实现方案为按照文件大小将日志输出到文件
+
+按照时间将日志输出到文件的方案如下：https://github.com/liuchonglin/go-tools/tree/master/logs
