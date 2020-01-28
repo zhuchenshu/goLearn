@@ -30,6 +30,7 @@ func TestHandler(c *gin.Context) {
 
 func TestRedisHandler(c *gin.Context) {
 	redisResp := utils.GetRedisRepo()
+	utils.Infof("config : ", utils.GetString("LOG_LEVEL"))
 	redisResp.HmsetString("zhuchenshu", map[string]string{"123": "123"})
 	c.JSON(200, gin.H{
 		"message": "success",

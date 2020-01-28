@@ -1,0 +1,10 @@
+{"level":"info","time":"2020-01-27T20:25:33.472+0800","linenum":"C:/Users/chenshu/Desktop/Go/goLearn/backend/utils/log.go:62","msg":"test info : %!(EXTRA string=hello world)","serviceName":"serviceName"}
+{"level":"info","time":"2020-01-27T20:25:34.388+0800","linenum":"C:/Users/chenshu/Desktop/Go/goLearn/backend/utils/log.go:62","msg":"test info : %!(EXTRA string=hello world)","serviceName":"serviceName"}
+{"level":"info","time":"2020-01-27T20:25:40.805+0800","linenum":"C:/Users/chenshu/Desktop/Go/goLearn/backend/utils/log.go:62","msg":"test info : %!(EXTRA string=hello world)","serviceName":"serviceName"}
+{"level":"info","time":"2020-01-27T20:25:44.057+0800","linenum":"C:/Users/chenshu/Desktop/Go/goLearn/backend/utils/log.go:62","msg":"test info : %!(EXTRA string=hello world)","serviceName":"serviceName"}
+{"level":"info","time":"2020-01-27T20:26:25.392+0800","linenum":"C:/Users/chenshu/Desktop/Go/goLearn/backend/utils/log.go:62","msg":"test info : %!(EXTRA string=hello world)","serviceName":"serviceName"}
+{"level":"info","time":"2020-01-27T20:33:26.935+0800","linenum":"C:/Users/chenshu/Desktop/Go/goLearn/backend/utils/log.go:62","msg":"test info : %!(EXTRA string=hello world)","serviceName":"GoLearn"}
+{"level":"info","time":"2020-01-28T15:07:37.992+0800","linenum":"C:/Users/chenshu/Desktop/Go/goLearn/backend/utils/log.go:62","msg":"test info : %!(EXTRA string=hello world)","serviceName":"GoLearn"}
+{"level":"error","time":"2020-01-28T21:46:28.471+0800","linenum":"C:/Users/chenshu/Desktop/Go/goLearn/backend/utils/log.go:70","msg":"HmsetInt64 HMSET error: err=dial tcp: address 47.106.145.145: missing port in address, name=zhuchenshu, value=map[123:123]","serviceName":"GoLearn"}
+{"level":"info","time":"2020-01-28T22:29:47.445+0800","linenum":"C:/Users/chenshu/Desktop/Go/goLearn/backend/utils/log.go:62","msg":"config : %!(EXTRA string=debug)","serviceName":"GoLearn"}
+{"level":"info","time":"2020-01-28T22:30:42.694+0800","linenum":"C:/Users/chenshu/Desktop/Go/goLearn/backend/utils/log.go:62","msg":"config : %!(EXTRA string=)","serviceName":"GoLearn"}
