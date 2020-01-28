@@ -27,3 +27,11 @@ func TestHandler(c *gin.Context) {
 		"message": "pong",
 	})
 }
+
+func TestRedisHandler(c *gin.Context) {
+	redisResp := utils.GetRedisRepo()
+	redisResp.HmsetString("zhuchenshu", map[string]string{"123": "123"})
+	c.JSON(200, gin.H{
+		"message": "success",
+	})
+}

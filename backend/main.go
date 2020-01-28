@@ -7,7 +7,7 @@ import (
 
 func main() {
 	r := gin.Default()
-
 	r.GET("/ping", service.TestHandler)
+	r.GET("/test", service.TestRedisHandler)
 	r.Run() // listen and serve on 0.0.0.0:8080
 }
