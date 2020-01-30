@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-var logger *zap.Logger
+var Logger *zap.Logger
 
 func init() {
 	hook := lumberjack.Logger{
@@ -22,7 +22,7 @@ func init() {
 	encoderConfig := zapcore.EncoderConfig{
 		TimeKey:        "time",
 		LevelKey:       "level",
-		NameKey:        "logger",
+		NameKey:        "Logger",
 		CallerKey:      "linenum",
 		MessageKey:     "msg",
 		StacktraceKey:  "stacktrace",
@@ -51,21 +51,21 @@ func init() {
 	// 设置初始化字段
 	filed := zap.Fields(zap.String("serviceName", "GoLearn"))
 	// 构造日志
-	logger = zap.New(core, caller, development, filed)
+	Logger = zap.New(core, caller, development, filed)
 }
 
 func Debugf(format string, args ...interface{}) {
-	logger.Debug(fmt.Sprintf(format, args...))
+	Logger.Debug(fmt.Sprintf(format, args...))
 }
 
 func Infof(format string, args ...interface{}) {
-	logger.Info(fmt.Sprintf(format, args...))
+	Logger.Info(fmt.Sprintf(format, args...))
 }
 
 func Warnf(format string, args ...interface{}) {
-	logger.Warn(fmt.Sprintf(format, args...))
+	Logger.Warn(fmt.Sprintf(format, args...))
 }
 
 func Errorf(format string, args ...interface{}) {
-	logger.Error(fmt.Sprintf(format, args...))
+	Logger.Error(fmt.Sprintf(format, args...))
 }

@@ -71,3 +71,11 @@ func NewError(code int, desc string) *Error {
 func (errorCode *Error) Error() string {
 	return errorCode.errorDes
 }
+
+func (errorCode *Error) ErrorCode() int {
+	return errorCode.errorCode
+}
+
+func (errorCode *Error) ErrorDesc() string {
+	return errorCode.errorDes
+}

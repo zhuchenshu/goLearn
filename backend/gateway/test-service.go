@@ -1,4 +1,4 @@
-package service
+package gateway
 
 import (
 	"github.com/gin-gonic/gin"
@@ -23,16 +23,12 @@ func TestHandler(c *gin.Context) {
 	if err != nil {
 		utils.Errorf("Save withCollection error: error=%s", err.Error())
 	}
-	c.JSON(200, gin.H{
-		"message": "pong",
-	})
+	SendSuccessResponse(c, "pong")
 }
 
 func TestRedisHandler(c *gin.Context) {
 	redisResp := utils.GetRedisRepo()
-	utils.Infof("config : ", utils.GetString("LOG_LEVEL"))
+	utils.Infof("config : ", utils.CONFIG.GetString("LOG_LEVEL"))
 	redisResp.HmsetString("zhuchenshu", map[string]string{"123": "123"})
-	c.JSON(200, gin.H{
-		"message": "success",
-	})
+	SendSuccessResponse(c, "success")
 }
